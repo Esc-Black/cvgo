@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'HYZhengYuan';
+    src: local('HYZhengYuan'),
+        url('./fonts/HYZhengYuan-55W.ttf') format('truetype');
+    font-display: swap;
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root {
+    --text-font: 'HYZhengYuan';
+    --text-size: 16px;
+    --text-line-height: 1.6;
+}
+
+html {
+    font-size: var(--text-size);
+}
+
+body {
+    background: white;
+    width: 21cm;
+    height: 29.7cm;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.5cm;
+    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+    font-family: var(--text-font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    width: 19cm;
+    height: 28cm;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: aqua;
+}
+
+/* body>*:first-child {
+    margin-top: 0 !important;
+}
+
+body>*:last-child {
+    margin-bottom: 0 !important;
+} */
+
+h1,
+h2,
+h3 {
+    font-family: var(--title-font);
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+    color: var(--title-color);
+}
+
+
+h1 {
+    font-size: 2rem;
+    height: 50px;
+    text-align: left;
+    margin: 0 auto;
+    align-items: center;
+    margin-bottom: 0.5cm;
+    margin-top: 0.5cm;
+}
+
+h1::before {
+    content: " # ";
+    left: 5px;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: black;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+ul,
+ol {
+    padding-inline-start: 2em;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+
+p {
+    line-height: var(--text-line-height);
+}
