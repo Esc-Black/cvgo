@@ -3,14 +3,27 @@
     src: local('HYZhengYuan'),
         url('./fonts/HYZhengYuan-55W.ttf') format('truetype');
     font-display: swap;
-    font-weight: bold;
+    font-weight: normal;
     font-style: normal;
 }
 
 :root {
+    /* text */
     --text-font: 'HYZhengYuan';
-    --text-size: 16px;
+    --text-size: 13px;
     --text-line-height: 1.6;
+
+    /* alignment */
+    --hr-margin: 1rem;
+    --block-margin: 1rem;
+    --p-spacing: 0.8rem;
+
+    /* colors */
+    --text-color: #304455;
+    --bg-color: #ffffff;
+    --accent-color: #31a062;
+    --block-color: #f8f8f8;
+    --horizontal-divider-color: var(--accent-color);
 }
 
 html {
@@ -18,12 +31,13 @@ html {
 }
 
 body {
-    background: white;
+    background: var(--bg-color);
     width: 21cm;
     height: 29.7cm;
     display: block;
     margin: 0 auto;
-    margin-bottom: 0.5cm;
+    margin-top: 1cm;
+    margin-bottom: 1cm;
     box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
     font-family: var(--text-font);
     display: flex;
@@ -36,84 +50,79 @@ body {
     height: 28cm;
     flex-direction: row;
     justify-content: space-around;
-    background-color: aqua;
+    background-color: var(--bg-color)
 }
-
-/* body>*:first-child {
-    margin-top: 0 !important;
-}
-
-body>*:last-child {
-    margin-bottom: 0 !important;
-} */
 
 h1,
 h2,
 h3 {
     font-family: var(--title-font);
     position: relative;
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
-    font-weight: bold;
-    line-height: 1.4;
+    font-weight: normal;
+    line-height: 1.2;
     cursor: text;
     color: var(--title-color);
 }
 
 
 h1 {
-    font-size: 2rem;
-    height: 50px;
+    font-size: 1.8rem;
     text-align: left;
     margin: 0 auto;
     align-items: center;
-    margin-bottom: 0.5cm;
     margin-top: 0.5cm;
 }
 
 h1::before {
-    content: " # ";
+    content: "# ";
+    color: var(--accent-color);
     left: 5px;
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+    width: fit-content;
+    border-bottom: 1.5px solid var(--text-color);
 }
 
 h3 {
-    font-size: 1.4rem;
-}
-
-li p.first {
-    display: inline-block;
+    font-size: 1.2rem;
 }
 
 hr {
-    height: 2px;
-    padding: 0;
-    margin: 16px 0;
-    background-color: black;
-    border: 0 none;
-    overflow: hidden;
-    box-sizing: content-box;
-}
-
-ul,
-ol {
-    padding-inline-start: 2em;
-}
-
-ul:first-child,
-ol:first-child {
-    margin-top: 0;
-}
-
-ul:last-child,
-ol:last-child {
-    margin-bottom: 0;
+    border: 0.5px solid var(--horizontal-divider-color);
 }
 
 
 p {
     line-height: var(--text-line-height);
+}
+
+.keywords {
+    margin: 0 2px;
+    background-color: var(--block-color);
+    padding: 3px 5px;
+    border-radius: 3px;
+    border: 0.75px solid lightgray;
+}
+
+strong {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+li {
+    margin-left: 5px;
+}
+
+ul {
+    margin-left: 5px;
+}
+
+
+.details {
+    max-width: 800px;
+    margin: 0 auto;
 }
